@@ -17,7 +17,6 @@ const thisProject = defineProps({
 function toView() {
     project.value = thisProject.data
     router.push({ name: RouteName.EDITPROJECT, params: { id: thisProject.data.id } });
-    console.log(project.value)
 }
 
 </script>

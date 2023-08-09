@@ -6,6 +6,10 @@ import { RouteName } from '@/constants/route-names';
 function gotoWorkerButton(){
     router.push({ name: RouteName.WORKER })
 }
+
+function gotoNewProjectButton(){
+    router.push({ name: RouteName.ADDPROJECT })
+}
 </script>
 
 <template>
@@ -13,10 +17,10 @@ function gotoWorkerButton(){
         <h1 style="text-align: center; padding-bottom: 20px;">Project Manager</h1>
         <div style="text-align: center;">
           <button class="worker-button"
-            @click="gotoWorkerButton">Workers
+            @click="gotoWorkerButton()">Workers
           </button>
           <button class="worker-button"
-            @click="">New Project
+            @click="gotoNewProjectButton()">New Project
           </button>
         </div>
         <tableComponent/>

@@ -16,7 +16,13 @@ const routes: RouteRecordRaw[] = [
     path: "/editproject/:id",
     name: RouteName.EDITPROJECT,
     component: () => import("../views/edit-project-view.vue"),
+  },
+  {
+    path: "/addproject",
+    name: RouteName.ADDPROJECT,
+    component: () => import("../views/new-project-view.vue"),
   }
+  
 ];
 
 export default routes;

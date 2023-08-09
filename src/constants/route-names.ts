@@ -1,5 +1,6 @@
 export enum RouteName {
     HOME = "home",
     WORKER = "worker",
-    EDITPROJECT = "editproject"
+    EDITPROJECT = "editproject",
+    ADDPROJECT = 'addproject'
 }

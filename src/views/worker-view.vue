@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import workerComponent from '@/components/worker-component.vue';
+import workerTableComponent from '@/components/worker-table-component.vue';
+import { RouteName } from '@/constants/route-names';
 import router from '@/router';
+import { useWorkerStore } from '@/stores/WorkerStore';
+import { ref } from 'vue'
+
+const WorkerStore = ref(useWorkerStore())
 
 function backButton(){
     router.back();
+}
+
+function addWorkerButton() {
+  router.push(RouteName.ADDWORKER)
 }
 
 </script>
@@ -13,8 +22,12 @@ function backButton(){
         <div style="text-align: left;">
             <button @click="backButton" class="back-button">back</button>
         </div>
-        <h1 style="text-align: center; margin-bottom: 30px;">List of Workers</h1>
-        <workerComponent></workerComponent>
+        {{ WorkerStore.workerIds }}
+        <div>
+          <h1 style="text-align: left; margin-bottom: 30px;">List of Workers</h1>
+          <button @click="addWorkerButton" class="back-button">Add Worker</button>
+        </div>
+        <workerTableComponent></workerTableComponent>
     </div>
         
 </template>

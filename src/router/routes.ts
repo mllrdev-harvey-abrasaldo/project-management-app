@@ -21,6 +21,16 @@ const routes: RouteRecordRaw[] = [
     path: "/addproject",
     name: RouteName.ADDPROJECT,
     component: () => import("../views/new-project-view.vue"),
+  },
+  {
+    path: "/addworker",
+    name: RouteName.ADDWORKER,
+    component: () => import("../views/new-worker-view.vue"),
+  },
+  {
+    path: "/editworker/:id",
+    name: RouteName.EDITWORKER,
+    component: () => import("../views/edit-worker-view.vue"),
   }
   
 ];

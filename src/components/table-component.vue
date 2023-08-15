@@ -6,6 +6,7 @@ const ProjectStore = useProjectStore();
 </script>
 
 <template>
+  {{ ProjectStore.ProjectIds }}
   <table style="border-spacing: 30px; width: 100%;">
     <thead>
         <tr>

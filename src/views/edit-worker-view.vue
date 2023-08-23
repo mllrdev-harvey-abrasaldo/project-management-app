@@ -4,6 +4,7 @@ import { useWorkerStore } from '../stores/WorkerStore';
 import {useWorker} from '@/composables/use-worker';
 import router from '@/router';
 import { useProjectStore } from '@/stores/ProjectStore';
+import { RouteName } from '@/constants/route-names';
 
 const WorkerStore = useWorkerStore();
 const ProjectStore = useProjectStore();
@@ -17,7 +18,7 @@ const saveChanges = () => {
 };
 
 const backButton = () => {
-  router.push('/')
+  router.push('/worker')
 }
 
 

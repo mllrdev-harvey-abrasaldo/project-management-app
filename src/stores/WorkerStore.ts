@@ -30,12 +30,11 @@ export const useWorkerStore = defineStore('WorkerStore', () => {
         }
     }
 
-    function editWorker(workerId: number, updatedWorker: Partial<IWorker>) {    //this function still needs revision
+    function editWorker(workerId: number, updatedWorker: Partial<IWorker>) {
         const index = Workers.value.findIndex(worker => worker.id === workerId);
         if (index !== -1) {
             Workers.value[index] = { ...Workers.value[index], ...updatedWorker };
         }
-        ProjectStore.value.updateProjectWorkers();
     }
 
     function addNextNumber(arr: number[]): number {

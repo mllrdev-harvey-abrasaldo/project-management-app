@@ -8,17 +8,21 @@ let newName = ref('')
 let newLocation = ref('')
 let newWorker = ref(0)
 
-    const addNewProject = () => {
-      const newProject = {
-        id: projectStore.addNextNumber(projectStore.ProjectIds),
-        name: newName.value,
-        location: newLocation.value,
-        workers: newWorker.value,
-      };
-
-      projectStore.addProject(newProject);
-      router.back()
+const addNewProject = () => {
+  const newProject = {
+    id: projectStore.addNextNumber(projectStore.ProjectIds),
+      name: newName.value,
+      location: newLocation.value,
+      workers: newWorker.value,
     };
+
+    projectStore.addProject(newProject);
+    backButton();
+  };
+
+function backButton() {
+  router.back()
+}
 
 </script>
 
@@ -33,6 +37,7 @@ let newWorker = ref(0)
 
     <button type="submit" class="form-button">Create Project</button>
   </form>
+  <button class="back-button" @click="backButton()"> Back </button>
 </div>
 </template>
 
@@ -71,4 +76,16 @@ let newWorker = ref(0)
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
-}</style>
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+</style>

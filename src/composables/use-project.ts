@@ -2,10 +2,10 @@ import type  {IProject}  from '@/interface/projects';
 import { ref } from 'vue';
 
 const project = ref<IProject>({
-    id: 0,
+    id: -1,
     name: "noProjectName",
     location: 'noProjectLocation',
-    workers: 0,
+    workers: -1,
 
 });
 

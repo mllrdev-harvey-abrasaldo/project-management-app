@@ -22,5 +22,9 @@ function toView() {
 </script>
 
 <template>
-    <button @click="toView" style="padding: 4px 8px; background-color: blue; color: #fff; border: none; cursor: pointer;">Edit Project</button>
+  <button
+    @click="toView"
+    class="px-2 py-1 bg-blue-500 text-white border-none cursor-pointer hover:bg-blue-600 active:bg-blue-700">
+    Edit Project
+  </button>
 </template>

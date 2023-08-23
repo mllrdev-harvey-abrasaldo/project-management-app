@@ -1,0 +1,13 @@
+{
+    "projects": [
+      { "id": 1, "name": "Bridge", "location": "Dumaguete", "workers": 0 },
+      { "id": 2, "name": "Road", "location": "Siaton", "workers": 0 },
+      { "id": 3, "name": "House", "location": "Amlan", "workers": 0 }
+    ],
+    "workers": [
+      { "id": 1, "name": "Harvey", "assignmentId": 1 },
+      { "id": 2, "name": "Joshua", "assignmentId": 2 },
+      { "id": 3, "name": "Zyr", "assignmentId": 3 },
+      { "id": 4, "name": "Kit", "assignmentId": 1 }
+    ]
+  }

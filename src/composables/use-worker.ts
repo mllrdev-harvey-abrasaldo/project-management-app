@@ -2,9 +2,9 @@ import type  {IWorker}  from '@/interface/workers';
 import { ref } from 'vue';
 
 const worker = ref<IWorker>({
-    id: 0,
+    id: -1,
     name: "noName",
-    assignmentId: 0,
+    assignmentId: -1,
 
 });
 
